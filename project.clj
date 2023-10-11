@@ -1,11 +1,11 @@
-(defproject com.mjachimowicz/ragtime-clj "0.1.2"
+(defproject org.clojars.johanatan/ragtime-clj "0.1.3"
   :description "Extension for ragtime that handles migrations as clj files"
-  :url         "https://github.com/mariusz-jachimowicz-83/ragtime-clj"
+  :url         "https://github.com/johanatan/ragtime-clj"
   :license     {:name "Eclipse Public License"
                 :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[org.clojure/clojure   "1.9.0-beta4"]
-                 [ragtime               "0.7.2"]]
+  :dependencies [[org.clojure/clojure     "1.9.0-beta4"]
+                 [dev.weavejester/ragtime "0.9.3"]]
 
   :deploy-repositories [["clojars" {:sign-releases false}]]
 
