@@ -2,12 +2,13 @@
   (:refer-clojure :exclude [load-file])
   (:require
     [clojure.java.jdbc :as jdbc]
+    [clojure.string]
     [ragtime.jdbc]
     [ragtime.protocols])
   (:import [java.io File]))
 
 (defn- execute-clj! [db-spec clj-fn]
-  (clj-fn db-spec))
+  (jdbc/db-do-prepared db-spec (clojure.string/join (clj-fn))))
 
 (defrecord CljMigration [id up down]
   ragtime.protocols/Migration
